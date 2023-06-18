@@ -1,0 +1,19 @@
+Screwy Pirates 
+Question:
+How will the 100 gold coins be divided among five democratic pirates who follow a specific voting process and prioritize staying alive and acquiring more gold while minimizing the number of pirates on the boat?
+The senior pirate proposes a plan, and if at least 50% of the pirates agree to the plan, the coins will be divided. If not, then the senior pirate will be killed, and the process continues with the second most senior pirate. 
+
+
+Answer: 
+We should use Game Theory/DP to solve this question. Try a smaller # of pirates
+
+The 1-pirate case is trivial. The 2-pirate case will result in the senior pirate getting all the gold since he represents 50% of the pirates and can thus take all the money he wants 
+
+If we add a third pirate, then what happens? Well, everyone knows that if he (pirate 3) gets killed, pirate 2 gets everything and pirate 1 gets nothing.
+Thus, he can propose 1 coin to pirate 1, 0 coins to pirate 2, and 99 coins to himself. Pirate 1 will agree since this is one more than he'd get if he votes to kill pirate 3. 
+
+If we add a fourth pirate, then what happens? As we saw in the third case, we know that pirate 2 will get nothing amongst rational pirates. Thus, to get 50% aggreement, pirate 4 will offer pirate 2 one coin, while keeping 99 for himself. 
+
+But what if we finally get to our 5 pirate case? If he gets killed, then Pirates 1 and 3 get nothing. Thus, he should offer Pirates 2 and 4 nothing, and he should offer Pirates 1 and 3 one coin each, while keeping 98 coins for himself. 
+
+To generalize this, it becomes clear that for any 2n + 1 pirate cases (for n < 99), the senior pirate will get all the coins after distributing 1 coin to pirates 1, 3, ... , 2n - 1 each. 
