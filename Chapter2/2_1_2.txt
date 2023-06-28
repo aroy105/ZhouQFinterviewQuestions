@@ -1,0 +1,11 @@
+100 tigers and 100 sheep are put on a magic island that only has grass. Tigers can eat grass but would rather eat sheep. Assume:
+A) Each time, only one tiger can eat one sheep, and the tiger will itself become a sheep after it eats the sheep. 
+B) All tigers are smart and perfectly rational and they want to survive. 
+Will the sheep be eaten? 
+
+Solution. 
+Similar to the pirate problem, break it down to n = 1 tiger. In this case, the sheep gets eaten, 
+In n = 2 tigers, the sheep does not get eaten, since if one tiger eats the sheep, it'll degrade to the n = 1 tiger state, and he'll be eaten as well. 
+In n = 3 tigers, the first tiger to do the math can safely eat the sheep, because if he does, it'll devolve to the n = 2 state, where neither tiger eats any sheep for fear that they themselves will be eaten 
+
+Thus, if n is even, no tigers will eat the sheep, but if n is odd, the sheep dies. 
