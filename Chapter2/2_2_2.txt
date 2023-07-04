@@ -1,0 +1,33 @@
+You and your colleagues know your boss (A)'s birthday is either: 
+Mar 4, Mar 5, Mar 8,
+Jun 4, Jun 7, 
+Sep 1, Sep 5, 
+Dec 1, Dec 2, Dec 8 
+A told you the month of his birthday, and told C the day of his birthday. 
+You first say "I don't know A's birthday; C doesn't know it either." 
+C replies "I didn't know A's birthday, but now I know it." 
+Then you say, "Now I know it, too."
+After hearing this dialogue, the assistant writes A's birthday down without further comment. What did the assistant write? 
+
+Solution: 
+
+Label each statment for simplicity sake later on: 
+You first say "I don't know A's birthday; C doesn't know it either." (Statement 1)
+C replies "I didn't know A's birthday, but now I know it." (Statement 2)
+Then you say, "Now I know it, too." (Statement 3)
+
+The months the birthday could be in are {Mar, Jun, Sep, Dec}
+The days the birthday could land on are {1, 2, 4, 5, 7, 8}
+Had the birthday been on a unique day, C would have already known it, which contradicts Statement 1. 
+Thus, you know C could not have been told numbers 2 or 7. 
+
+This part is tricky, but if you had been told the month was June or December, then C could have been told the day was 7 or 2 respectively. 
+After you made Statement 1, C knows that *you know* he can't have immediately deduced the birthday.
+For you to know that C couldn't immediately deduce the birthday, the Boss must have told you a birthday month with non-unique day values. 
+Thus, the boss told you either Mar or Sep. 
+
+Now our list is narrowed down to Mar 4, Mar 5, Mar 8, Sep 1, and Sep 5
+Between Mar and Sep, for Statement 2 to be correct (i.e. C knows the birthday now), the day couldn't have been 5, leaving us Mar 4, Mar 8, and Sep 1. 
+For Statement 3 to be correct, the month must be unique, and only one of the three dates has a unique associated month. 
+
+Thus, the assistant wrote Sep 1. 
