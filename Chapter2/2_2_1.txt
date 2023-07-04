@@ -1,0 +1,10 @@
+Persons A, B, C, and D need to get across the river, and there is a bridge they can take which only holds two people at a time. Each pair can only walk at the speed of the slowest person 
+A takes 10 minutes to cross, B takes B, C takes 2 minutes, and D takes 1 minute. 
+How long will it take all people to walk across? 
+
+Solution 
+One optimization is to have the two slowest people cross at once, but never have either of them make a trip back. How can we do this? 
+If we first have C and D go across first (2 minutes), and then have D run back with the torch, this takes 3 minutes, and C is now on the other side. 
+D gives torch to A and B who go across (10 minutes). A/B group gives C torch after crossing, who runs back (2 minutes). Takes 12 minutes, and A and B are on other side. 
+Finally, C and D cross the bridge (2 minutes), and after 3 + 12 + 2 = 17 minutes, all have crossed. 
+Note the same time would have been taken if C was sent back first, followed by by D.
