@@ -1,0 +1,14 @@
+Given two ropes of varying densities at different points (i.e. different burn times through different sections) which burn completely in 1 hour, how do you use these two ropes to measure 45 minutes? 
+
+This problem really made me feel super inadquate. I guess it really made me recognize just how uncreative I am. 
+
+Solution:
+If a rope takes x minutes to burn from one side to another, it will take x/2 minutes to burn if you simulataneously set it on fire from both ends. 
+
+If we light one rope from both ends and the other rope normally, after 30 minutes, the first will be completely burnt out, while the other one will have become a 30 minute rope. 
+
+Right when the first rope is burnt out, we should know light the second, now 30-min rope from the unburnt end. 
+
+Thus the second rope should burn out 15 minutes, for a grand total of 45 minutes after the first match was lit. s
+
+Maybe a possible thing to notice was the x/2 nature, and also notice that 45 mins is 1.5x 30 mins. 
