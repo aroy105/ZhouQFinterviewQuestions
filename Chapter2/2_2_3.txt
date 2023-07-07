@@ -1,0 +1,11 @@
+A casino offers a card game using a normal deck of 52 cards. The rule is that you tum over two cards each time. 
+For each pair, if both are black, they go to the dealer's pile; if both are red, they go to your pile; if one black and one red, they are discarded.
+The process is repeated until you two go through all 52 cards. 
+If you have more cards in your pile, you win $100; otherwise (including ties) you get nothing. You can negotiate the price you want to pay for the game. 
+How much would you be willing to pay to play this game?
+
+Solution: 
+In the best case scenario, the board is paired up in such a way where there are 26 black pairs and 26 red pairs i.e. a tie i.e. you lose. 
+If we consider permutations where there are pairs, the number of black pairs and the number of red pairs will ALWAYS be the same i.e. you lose. 
+There is literally no situation where there are more red pairs than black pairs. Conversely, there are also no situations where there are more black pairs than red, 
+but that doesn't really matter. Thus, you should never play this game, because even if there is no charge to play, you waste your time. 
